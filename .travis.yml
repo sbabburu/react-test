@@ -1,0 +1,7 @@
+sudo: Required
+services:
+ - docker
+before_install:
+  script:
+   docker build -t sbabburu/react-test .
+   docker run sbabburu/react-test npm run test -- -- coverage
