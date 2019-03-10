@@ -5,6 +5,7 @@ services:
   - docker
 
 before_install:
+  - node --version
   - docker build -t react-docker -f Dockerfile.dev .
 
 script:
