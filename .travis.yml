@@ -2,6 +2,6 @@ sudo: Required
 services:
  - docker
 before_install:
-  script:
-   docker build -t sbabburu/react-test .
-   docker run sbabburu/react-test npm run test -- -- coverage
+  - docker build -t sbabburu/react-test .
+script:
+  - docker run sbabburu/react-test npm run test -- -- coverage
